@@ -348,3 +348,5 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+/ABDJava/03-Operators and Expressions/Arithmetic1/nbproject/private/
+/ABDJava/03-Operators and Expressions/Arithmetic1/build/
