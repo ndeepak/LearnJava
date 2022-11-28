@@ -3,7 +3,7 @@ package inheritancePackage;
 class Room
 {
 	int length, breadth;
-	public Room(int length, int breadth) // Constructor for initialization
+	public Room(int length, int breadth) // Constructor for initialization and Memory allocation
 	{
 		this.length = length;
 		this.breadth = breadth;
