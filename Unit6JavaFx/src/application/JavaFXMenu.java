@@ -17,8 +17,10 @@ public class JavaFXMenu extends Application {
 
 	@Override
 	public void start(Stage stage) throws Exception {
-		MenuBar bar = new MenuBar();
+		MenuBar bar = new MenuBar(); // Default class name = menu-bar
+		bar.setId("barID");
 		Menu file = new Menu("FILE");
+		file.setId("fileID");
 		
 		MenuItem open = new MenuItem();
 		open.setOnAction(e-> new FileChooser().showOpenDialog(stage));
@@ -34,6 +36,8 @@ public class JavaFXMenu extends Application {
 		
 		
 		Scene scene = new Scene(root, 300, 300);
+		
+		scene.getStylesheets().add(getClass().getResource("custom.css").toExternalForm());
 		stage.setScene(scene); // Setting the scene in stage.
 		
 		// Showing the stage in show
