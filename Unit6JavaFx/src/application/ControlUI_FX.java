@@ -45,20 +45,24 @@ public class ControlUI_FX extends Application {
 //		Creating Buttons
 		Button submit = new Button("Submit");
 		Button close = new Button("Close");
-		
+
 		Button reset = new Button("Reset");
-		reset.setOnAction(e ->{
-			nametf.clear();emailtf.clear();addresstf.clear();contacttf.clear(); agetf.clear();
+		reset.setOnAction(e -> {
+			nametf.clear();
+			emailtf.clear();
+			addresstf.clear();
+			contacttf.clear();
+			agetf.clear();
 		});
-		
+
 		Button open = new Button("Open");
-		
+
 //		close.setOnAction(e -> {
 //			System.out.println("Windows is closed.");
 //			System.exit(0);
 //		}
 //		);
-		
+
 		open.setOnAction(e -> new FileChooser().showOpenDialog(stage));
 
 //		Creating RadioButtons
@@ -79,10 +83,10 @@ public class ControlUI_FX extends Application {
 
 //		Creating HyperLinks
 		Hyperlink collgelink = new Hyperlink("https://ndeepak.github.io");
-		collgelink.setOnAction(e->{
+		collgelink.setOnAction(e -> {
 			System.out.println("Link Clicked");
 		});
-	
+
 //		Creating Tool tip
 		Tooltip tip = new Tooltip();
 		tip.setText("Click here to EXIT");
@@ -100,9 +104,9 @@ public class ControlUI_FX extends Application {
 
 //		Creating A Grid Pane Layout
 		GridPane root = new GridPane();
-
+		root.setId("rootid");
 //		Setting Size for the Pane
-		root.setMinSize(650, 450);
+		root.setMinSize(500, 450);
 		root.setVgap(5);
 		root.setHgap(5);
 		root.setPadding(new Insets(5, 5, 5, 5));
@@ -110,38 +114,42 @@ public class ControlUI_FX extends Application {
 //		Setting the Grid Alignment
 		root.setAlignment(Pos.CENTER);
 
-		root.add(name, 0, 0); root.add(nametf, 1, 0); 
-		root.add(email, 0, 1); root.add(emailtf, 1, 1);
-		root.add(address, 0, 2); root.add(addresstf, 1, 2);
-		root.add(contact, 0, 3); root.add(contacttf, 1, 3);
-		root.add(age, 0, 4); root.add(agetf, 1, 4);
-		root.add(gender, 0, 5); 
-		
-		root.add(male, 1, 5); root.add(female, 1, 6);
-		
+		root.add(name, 0, 0);
+		root.add(nametf, 1, 0);
+		root.add(email, 0, 1);
+		root.add(emailtf, 1, 1);
+		root.add(address, 0, 2);
+		root.add(addresstf, 1, 2);
+		root.add(contact, 0, 3);
+		root.add(contacttf, 1, 3);
+		root.add(age, 0, 4);
+		root.add(agetf, 1, 4);
+		root.add(gender, 0, 5);
+
+		root.add(male, 1, 5);
+		root.add(female, 1, 6);
+
 		root.add(ns, 1, 7);
 		root.add(new Text("I am a student of: "), 0, 8);
 		root.add(csit, 1, 8);
 		root.add(bca, 2, 8);
 		root.add(bbm, 3, 8);
-		
+
 		root.add(submit, 1, 9);
 		root.add(reset, 2, 9);
-		
+
 		root.add(new Text("Click HERE for more information"), 0, 10);
 		root.add(collgelink, 1, 10);
 		root.add(exit, 3, 11);
 		root.add(open, 0, 11);
-		
-		
+
 //		Creating A Scene Object, adding and displaying.
-		Scene scene = new Scene(root, 600, 600);
+		Scene scene = new Scene(root);
 		stage.setScene(scene);
+		scene.getStylesheets().add(getClass().getResource("controlstyle.css").toExternalForm());
 		stage.setTitle("Contol UI Components");
 		stage.show();
-		
-		
-		
+
 	}
 
 }
