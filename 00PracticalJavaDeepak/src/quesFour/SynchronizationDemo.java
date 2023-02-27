@@ -1,4 +1,4 @@
-package concurrencyPackage;
+package quesFour;
 class CSITBookingSystem1
 {
 	int csit_seats=48;
@@ -21,7 +21,7 @@ class CSITBookingSystem1
 		}
 	}
 }
-public class WithSynchronization extends Thread
+public class SynchronizationDemo extends Thread
 {
 	static CSITBookingSystem1 sd; // static because using is easy
 	int seats;
@@ -34,21 +34,22 @@ public class WithSynchronization extends Thread
 	public static void main(String[] args) 
 	{
 		sd = new CSITBookingSystem1();
-		WithSynchronization deep = new WithSynchronization();
+		
+		SynchronizationDemo deep = new SynchronizationDemo();
 		deep.seats = 15;
 		deep.start();
 		
-		WithSynchronization jeep = new WithSynchronization();
+		SynchronizationDemo jeep = new SynchronizationDemo();
 		jeep.seats = 10;
 		jeep.start();
 		
-		WithSynchronization heep = new WithSynchronization();
+		SynchronizationDemo heep = new SynchronizationDemo();
 		heep.seats = 23;
 		heep.start();
-		
-		WithSynchronization peep = new WithSynchronization();
-		peep.seats = 5;
-		peep.start();
+//		
+//		SynchronizationDemo peep = new SynchronizationDemo();
+//		peep.seats = 5;
+//		peep.start();
 	}
 
 }

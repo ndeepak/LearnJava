@@ -11,8 +11,8 @@ public class ThreadStopTest
       thread.start();
       System.out.println(currentThread().getName() + " is stopping user thread");
       userThread.stop();
-      Thread.sleep(2000);
-      System.out.println(currentThread().getName() + " is finished now");
+      Thread.sleep(5000);
+      System.out.println(currentThread().getName() + ", After 5 Seconds is finished now");
    }
 }
 class UserThread implements Runnable 
