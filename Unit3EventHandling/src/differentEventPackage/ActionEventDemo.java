@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-public class ActionEventDemo extends JFrame implements ActionListe
+public class ActionEventDemo extends JFrame implements ActionListener
 {
 	JLabel firstlbl, secondlbl, resultlbl;
 	JTextField firsttxt, secondtxt, resulttxt;
@@ -30,7 +30,7 @@ public class ActionEventDemo extends JFrame implements ActionListe
 		
 		// JFrame Configuration
 		setTitle("Action Event Handle Frame");
-		setSize(200, 400);
+		setSize(500, 400);
 		setLayout(new GridLayout(4,2));
 		
 		// Adding Components to JFrame

@@ -1,4 +1,4 @@
-package ioPackage;
+package quesSeven;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -12,7 +12,7 @@ public class ReadObjectFromStudent {
 
 		try {
 			fi = new FileInputStream(
-					"E:\\01 Learn Java\\LearnJava\\College Class\\EclispseJavaWorkSpace\\Unit1ProgrammingJava\\src\\ioPackage\\JavaFiles\\objectfile.txt");
+					"student.txt");
 			oi = new ObjectInputStream(fi);
 			Student s1 = (Student) oi.readObject(); // Type Casting
 			Student s2 = (Student) oi.readObject();
