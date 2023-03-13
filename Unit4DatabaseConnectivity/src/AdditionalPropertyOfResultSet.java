@@ -1,5 +1,6 @@
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 public class AdditionalPropertyOfResultSet 
@@ -9,7 +10,7 @@ public class AdditionalPropertyOfResultSet
 	Statement statement;
 	ResultSet set;
 	
-	public AdditionalPropertyOfResultSet()
+	public AdditionalPropertyOfResultSet() throws ClassNotFoundException, SQLException
 	{
 		con = new Database().getConnection();
 		statement = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
@@ -19,7 +20,6 @@ public class AdditionalPropertyOfResultSet
 		set = statement.executeQuery("SELECT * FROM College_tbl");
 //		set.absolute(5);
 		set.relative(-3);
-		set.
 		set.updateInt("id", 1); // ID COlumn
 		set.deleteRow();
 		

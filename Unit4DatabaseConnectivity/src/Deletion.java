@@ -11,9 +11,9 @@ public class Deletion {
 		ResultSet set;
 		con = new Database().getConnection();
 		statement = con.createStatement();
-		String update = "DELETE College_tbl SET CollegeName='Vedas'" + " WHERE id = 3";
+		String update = "DELETE Student_tbl SET CollegeName='Vedas'" + " WHERE id = 3";
 		statement.executeUpdate("delete");
-		set = statement.executeQuery("SELECT * FROM College_tbl");
+		set = statement.executeQuery("SELECT * FROM Student_tbl");
 
 		while (set.next()) {
 			System.out.println("College ID:" + set.getInt("id"));

@@ -9,6 +9,7 @@ public class KeyListenerDemo extends JFrame implements KeyListener {
 	private JTextField t1, t2, t3;
 	private JLabel l1, l2, l3;
 	private JButton b;
+	JLabel keyLabel;
 
 	KeyListenerDemo() {
 		super("Handling Key Event");
