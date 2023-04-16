@@ -1,0 +1,19 @@
+.text-field{
+	-fx-background-color:red;
+}
+
+#rootid{
+	-fx-background-color:skyblue;
+}
+
+.label,.radio-button, .check-box, .text{
+	-fx-text-fill:blue;
+}
+
+.button{
+	-fx-border-color:green;
+}
+
+.radio-button{
+	-fx-background-color:yellow;
+}
